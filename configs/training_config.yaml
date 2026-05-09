@@ -1,0 +1,67 @@
+# CrystalLM Training Configuration
+# This file contains all training hyperparameters
+
+# Model configuration
+model:
+  name: "google/t5-v1_1-large"
+  max_length: 512
+
+# Training configuration
+training:
+  num_epochs: 8
+  batch_size: 16
+  gradient_accumulation_steps: 4
+  learning_rate: 1.0e-4
+  weight_decay: 0.01
+  warmup_steps: 1000
+  max_grad_norm: 1.0
+  
+  # Mixed precision
+  fp16: true
+  bf16: false
+  
+  # Logging
+  logging_steps: 100
+  eval_steps: 500
+  save_steps: 2000
+  
+  # Early stopping
+  early_stopping_patience: 3
+  early_stopping_threshold: 0.001
+
+# Data configuration
+data:
+  train_file: "data/final/train.json"
+  val_file: "data/final/val.json"
+  test_file: "data/final/test.json"
+  max_samples: null  # null for all samples
+
+# Optimization
+optimizer:
+  type: "adamw"
+  betas: [0.9, 0.999]
+  eps: 1.0e-8
+
+scheduler:
+  type: "linear"
+  num_warmup_steps: 1000
+
+# Hardware
+device: "cuda"
+num_gpus: 4
+distributed: true
+
+# Output
+output_dir: "models/crystallm"
+save_total_limit: 3
+
+# Reproducibility
+seed: 42
+
+# Generation (for evaluation)
+generation:
+  num_beams: 5
+  max_length: 512
+  early_stopping: true
+  length_penalty: 1.0
+  no_repeat_ngram_size: 3

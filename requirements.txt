@@ -1,0 +1,34 @@
+# CrystalLM Requirements
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.12.0
+accelerate>=0.20.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# NLP evaluation
+nltk>=3.8.0
+rouge-score>=0.1.2
+bert-score>=0.3.13
+
+# Utilities
+pyyaml>=6.0
+tqdm>=4.65.0
+
+# Optional: Materials science (uncomment if needed)
+# pymatgen>=2023.5.10
+# ase>=3.22.0
+
+# Optional: Visualization (uncomment if needed)
+# matplotlib>=3.7.0
+# seaborn>=0.12.0
+
+# Optional: Experiment tracking (uncomment if needed)
+# wandb>=0.15.0
+# tensorboard>=2.13.0

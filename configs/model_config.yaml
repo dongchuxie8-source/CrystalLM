@@ -1,0 +1,73 @@
+# CrystalLM Model Configuration
+# This file contains model architecture settings
+
+# Base model
+base_model:
+  name: "google/t5-v1_1-large"
+  type: "T5ForConditionalGeneration"
+
+# Model variants
+variants:
+  t5_base:
+    name: "google/t5-v1_1-base"
+    parameters: "220M"
+    recommended_batch_size: 32
+    
+  t5_large:
+    name: "google/t5-v1_1-large"
+    parameters: "770M"
+    recommended_batch_size: 16
+    
+  t5_3b:
+    name: "google/t5-v1_1-xl"
+    parameters: "3B"
+    recommended_batch_size: 4
+    requires_deepspeed: true
+
+# Tokenizer settings
+tokenizer:
+  max_length: 512
+  padding: "max_length"
+  truncation: true
+
+# Generation settings
+generation:
+  # Beam search
+  num_beams: 5
+  early_stopping: true
+  
+  # Sampling (when do_sample=true)
+  temperature: 1.0
+  top_p: 0.9
+  top_k: 50
+  
+  # Penalties
+  repetition_penalty: 1.0
+  length_penalty: 1.0
+  no_repeat_ngram_size: 0
+  
+  # Output
+  num_return_sequences: 1
+  max_length: 512
+
+# Task-specific settings
+tasks:
+  s2t:  # Structure to Text
+    prefix: "translate structure to text: "
+    max_input_length: 512
+    max_output_length: 256
+    
+  t2s:  # Text to Structure
+    prefix: "translate text to structure: "
+    max_input_length: 256
+    max_output_length: 512
+    constrained_decoding: false
+
+# Model checkpoints
+checkpoints:
+  save_strategy: "steps"
+  save_steps: 2000
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  greater_is_better: false

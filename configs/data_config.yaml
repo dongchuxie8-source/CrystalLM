@@ -1,0 +1,93 @@
+# CrystalLM Data Configuration
+# This file contains data processing settings
+
+# Data paths
+paths:
+  raw_data:
+    mof_cif: "data/raw/mof/cif"
+    zeolite_cif: "data/raw/zeolite/cif"
+  
+  processed_data:
+    mof_features: "data/processed/mof_features.json"
+    zeolite_features: "data/processed/zeolite_features.json"
+    hssr_encoded: "data/processed/hssr_encoded.json"
+  
+  final_data:
+    train: "data/final/train.json"
+    val: "data/final/val.json"
+    test: "data/final/test.json"
+
+# Dataset splits
+splits:
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  seed: 42
+
+# Data statistics (expected)
+statistics:
+  total_samples: 8000
+  mof_samples: 5000
+  zeolite_samples: 3000
+  
+  avg_hssr_length: 150  # tokens
+  avg_description_length: 45  # words
+  
+  max_hssr_length: 500  # tokens
+  max_description_length: 200  # words
+
+# HSSR encoding settings
+hssr:
+  include_meta: true
+  include_comp: true
+  include_latt: true
+  include_symm: true
+  include_topo: true
+  include_build: true
+  include_prop: true
+  
+  # Numerical precision
+  lattice_precision: 3  # decimal places
+  angle_precision: 1
+  pore_precision: 1
+  density_precision: 2
+
+# Text generation settings
+text_generation:
+  level: 2  # 1=formula, 2=structure, 3=functional
+  include_properties: true
+  
+  # Level 3 (LLM-assisted)
+  llm_model: "gpt-4"
+  llm_temperature: 0.7
+
+# Data augmentation
+augmentation:
+  enabled: false
+  
+  # HSSR augmentation
+  hssr_field_reorder: false
+  
+  # Text augmentation
+  synonym_replacement: false
+  back_translation: false
+
+# Quality control
+quality_control:
+  validate_hssr: true
+  min_description_length: 10  # words
+  max_description_length: 200  # words
+  
+  # HSSR validation
+  check_required_tags: true
+  check_numerical_ranges: true
+  check_token_length: true
+  max_hssr_tokens: 500
+
+# Data loading
+dataloader:
+  batch_size: 16
+  num_workers: 4
+  pin_memory: true
+  shuffle_train: true
+  shuffle_eval: false
