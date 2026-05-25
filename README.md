@@ -1,4 +1,4 @@
-# CrystalLM: Bridging Crystalline Porous Materials and Natural Language
+# CrystalLM: Bidirectional Translation between Crystal Structures and Natural Language
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
@@ -213,7 +213,7 @@ If you use CrystalLM in your research, please cite:
 ```bibtex
 @inproceedings{xie2026crystallm,
   title={CrystalLM: Bridging Crystalline Porous Materials and Natural Language through Bidirectional Translation},
-  author={Xie, Dongchu and Dong, Yingchao},
+  author={Xie, Dongchu},
   booktitle={Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
   year={2026}
 }
