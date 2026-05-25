@@ -4,7 +4,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Official implementation of **CrystalLM: Bridging Crystalline Porous Materials and Natural Language through Bidirectional Translation**.
+Official implementation of **CrystalLM: Bidirectional Translation between Crystal Structures and Natural Language**.
 
 <!-- Links will be updated after publication -->
 <!-- [Paper](https://arxiv.org/abs/XXXX.XXXXX) | [Dataset](https://huggingface.co/datasets/crystallm/crystallm-8k) | [Models](https://huggingface.co/crystallm) -->
@@ -212,9 +212,8 @@ If you use CrystalLM in your research, please cite:
 
 ```bibtex
 @inproceedings{xie2026crystallm,
-  title={CrystalLM: Bridging Crystalline Porous Materials and Natural Language through Bidirectional Translation},
+  title={CrystalLM: Bidirectional Translation between Crystal Structures and Natural Language},
   author={Xie, Dongchu},
-  booktitle={Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
   year={2026}
 }
 ```
