@@ -4,9 +4,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Official implementation of **CrystalLM: Bidirectional Translation between Crystal Structures and Natural Language** (EMNLP 2026).
-
-📄 [Paper](https://arxiv.org/abs/XXXX.XXXXX) | 🤗 [Dataset](https://huggingface.co/datasets/crystallm/crystallm-8k) | 🤗 [Models](https://huggingface.co/crystallm)
+implementation of **CrystalLM: Bidirectional Translation between Crystal Structures and Natural Language** .
 
 ---
 
