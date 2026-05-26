@@ -4,7 +4,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-implementation of **CrystalLM: Bidirectional Translation between Crystal Structures and Natural Language** .
+Implementation of **CrystalLM: Bidirectional Translation between Crystal Structures and Natural Language** .
 
 ---
 
@@ -522,27 +522,12 @@ If you use CrystalLM in your research, please cite our paper:
 
 ---
 
-## 🙏 Acknowledgments
-
-- [CoRE MOF Database](https://github.com/gregchung/gregchung.github.io) for MOF structures
-- [IZA Database](https://www.iza-structure.org/) for zeolite structures
-- [HuggingFace Transformers](https://huggingface.co/transformers/) for model implementations
-- [Zeo++](http://www.zeoplusplus.org/) for pore geometry calculations
-
----
-
 
 ---
 
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
