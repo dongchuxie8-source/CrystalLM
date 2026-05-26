@@ -14,9 +14,15 @@ Official implementation of **CrystalLM: Bidirectional Translation between Crysta
 
 CrystalLM is the **first bidirectional translation system** between crystalline porous materials (MOFs and zeolites) and natural language descriptions. We bridge the gap between materials scientists and computational tools through intuitive natural language interfaces.
 
-![CrystalLM System Overview](assets/system_overview.png)
+![CrystalLM System Overview](assets/1.png)
 
-*Figure 1: CrystalLM system architecture showing the bidirectional translation pipeline between crystal structures (CIF format), HSSR representation, and natural language descriptions.*
+*Figure 1: CrystalLM system architecture showing the bidirectional translation pipeline between crystal structures and natural language descriptions.*
+
+**System Architecture:**
+CrystalLM consists of three main components working in a bidirectional pipeline:
+1. **HSSR Encoder**: Converts CIF files to hierarchical sequence representation
+2. **T5 Translator**: Fine-tuned T5 model for bidirectional translation
+3. **Constrained Decoder**: Ensures valid and physically consistent HSSR output
 
 ### Key Contributions
 
