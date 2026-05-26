@@ -71,7 +71,6 @@ CrystalLM consists of three main components working in a bidirectional pipeline:
 
 ```bash
 # Clone the repository
-git clone https://github.com/dongchuxie8-source/CrystalLM.git
 cd CrystalLM
 
 # Create conda environment
@@ -513,10 +512,8 @@ pip install wandb tensorboard
 If you use CrystalLM in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{xie2026crystallm,
+@inproceedings{2026crystallm,
   title={CrystalLM: Bidirectional Translation between Crystal Structures and Natural Language},
-  author={Xie, Dongchu and Dong, Yingchao},
-  booktitle={Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
   year={2026},
   publisher={Association for Computational Linguistics}
 }
@@ -524,15 +521,6 @@ If you use CrystalLM in your research, please cite our paper:
 
 ---
 
-## 📄 Paper Information
-
-- **Title**: CrystalLM: Bidirectional Translation between Crystal Structures and Natural Language
-- **Authors**: Dongchu Xie, Yingchao Dong
-- **Institution**: The Chinese University of Hong Kong, Shenzhen
-- **Conference**: EMNLP 2026
-- **Paper**: [arXiv](https://arxiv.org/abs/XXXX.XXXXX) *(to be updated)*
-- **Dataset**: [HuggingFace](https://huggingface.co/datasets/crystallm/crystallm-8k) *(to be released)*
-- **Models**: [HuggingFace](https://huggingface.co/crystallm) *(to be released)*
 
 ---
 
@@ -545,10 +533,6 @@ If you use CrystalLM in your research, please cite our paper:
 
 ---
 
-## 📧 Contact
-
-- **Dongchu Xie**: dongchuxie@link.cuhk.edu.cn
-- **GitHub Issues**: [https://github.com/dongchuxie8-source/CrystalLM/issues](https://github.com/dongchuxie8-source/CrystalLM/issues)
 
 ---
 
